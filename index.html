@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
 <div class="container">
-    <button id="basement" onclick="showImage(event);" style="width:30%; max-width:200px;"> Basement </button> <button id="floor1" onclick="showImage(event);" style="width:30%; max-width:200px"> 1st Floor </button> <button id="floor2" onclick="showImage(event);" style="width:30%; max-width:200px"> 2nd Floor </button>
-  </div>
+    <button id="basement" onclick="showImage(event);" class="button"> Basement </button> <button id="floor1" onclick="showImage(event);" style="width:30%; max-width:200px"> 1st Floor </button> <button id="floor2" onclick="showImage(event);" style="width:30%; max-width:200px"> 2nd Floor </button>
+  </div> -->
+ <div class="topnav">
+  <a onclick="showImage(event);" id="basement">Basement</a>
+  <a onclick="showImage(event);" id="floor1">1st Floor</a>
+  <a onclick="showImage(event);" id="floor2">2nd Floor</a>
+  <a onclick="showImage(event);" id="floor3">3rd Floor</a>
+</div> 
 <body>
-<img id="map" src="svg/outline.svg" style="height:100%;"/>
+<img id="map" src="svg/outline.svg" class="center-fit"/>
 <script>
   basementButton = document.getElementById("basement");
   floor1Button = document.getElementById("floor1");
   floor2Button = document.getElementById("floor2");
+  floor3Button = document.getElementById("floor3");
   img = document.getElementById("map");
 
   function showImage(event) {
@@ -20,7 +28,56 @@
     } if (event.target == floor2Button) {
       img.src = "svg/floor2.svg"
     }
+    if (event.target == floor3Button) {
+      img.src = "svg/floor3.svg"
+    }
   }
 </script>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: hand;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+* {
+     margin: 0;
+    padding: 0;
+}
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+</style>
 </body>
+
 </html>
