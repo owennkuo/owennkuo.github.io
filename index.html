@@ -4,7 +4,7 @@
     <button id="basement" onclick="showImage(event);"> Basement </button> <button id="floor1" onclick="showImage(event);"> 1st Floor </button> <button id="floor2" onclick="showImage(event);"> 2nd Floor </button>
   </div>
 <body>
-<img id="map" />
+<img id="map"/>
 <script>
   basementButton = document.getElementById("basement");
   floor1Button = document.getElementById("floor1");
@@ -13,11 +13,11 @@
 
   function showImage(event) {
     if (event.target == basementButton) {
-      img.src = "basement.svg"
+      img.src = "svg/basement.svg"
     } if (event.target == floor1Button) {
-      img.src = "floor1.svg"
+      img.src = "svg/floor1.svg"
     } if (event.target == floor2Button) {
-      img.src = "floor2.svg"
+      img.src = "svg/floor2.svg"
     }
   }
 </script>
