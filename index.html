@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="container">
-    <button id="basement" onclick="showImage(event);"> Basement </button> <button id="floor1" onclick="showImage(event);"> 1st Floor </button> <button id="floor2" onclick="showImage(event);"> 2nd Floor </button>
+    <button id="basement" onclick="showImage(event);" style="width:30%; max-width:200px;"> Basement </button> <button id="floor1" onclick="showImage(event);" style="width:30%; max-width:200px"> 1st Floor </button> <button id="floor2" onclick="showImage(event);" style="width:30%; max-width:200px"> 2nd Floor </button>
   </div>
 <body>
-<img id="map" src="svg/outline.svg"/>
+<img id="map" src="svg/outline.svg" style="height:100%;"/>
 <script>
   basementButton = document.getElementById("basement");
   floor1Button = document.getElementById("floor1");
